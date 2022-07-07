@@ -15,8 +15,8 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/test")
 public class TestController {
 
-    @Autowired
-    private HotelFacilities facilities;
+//    @Autowired
+//    private HotelFacilities facilities;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -26,14 +26,14 @@ public class TestController {
         return "Testing 1, 2, 3!";
     }
 
-    @GetMapping("/hotels")
-    public ResponseEntity<?> getRates() {
-
-        String url = "https://booking-com.p.rapidapi.com/v1/hotels/facilities?locale=en-gb&hotel_id=1676161";
+//    @GetMapping("/hotels")
+//    public ResponseEntity<?> getRates() {
+//
+//        String url = "https://booking-com.p.rapidapi.com/v1/hotels/facilities?locale=en-gb&hotel_id=1676161";
 //        String url = "booking-com.p.rapidapi.com";
-
-        HotelFacilities response = restTemplate.getForObject(url, HotelFacilities.class);
-
-        return ResponseEntity.ok(response);
-    }
+//
+//        HotelFacilities response = restTemplate.getForObject(url, HotelFacilities.class);
+//
+//        return ResponseEntity.ok(response);
+//    }
 }
